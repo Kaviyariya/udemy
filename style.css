@@ -487,7 +487,7 @@ p {
         color: white;
     }
     .navbar3{
-        gap: 5px;
+        gap: 10px;
     }
     .navbar2 input{
         font-size: 10px;
@@ -529,14 +529,16 @@ p {
     .course-cart {
         flex-basis: 40%;
     }
-
+    .navbar3{
+        gap:10px;
+    }
     .Course p {
         font-size: 8px;
         background-color: rgb(107, 20, 174);
         border-radius: 10px;
         border-style: solid;
         border-color: rgb(121, 14, 209);
-        padding: 4px;
+        padding: 2px;
         color: white;
     }
 
