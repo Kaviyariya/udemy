@@ -483,8 +483,11 @@ p {
         border-radius: 27px;
         border-style: solid;
         border-color: rgb(121, 14, 209);
-        padding: 7px;
+        padding: 5px;
         color: white;
+    }
+    .navbar3{
+        gap: 10px;
     }
     .navbar2 input{
         font-size: 10px;
