@@ -475,7 +475,7 @@ p {
         font-size: 10px;
     }
     .Course{
-        top: 60px;
+        top: 58px;
     }
     .Course p {
         font-size: 8px;
@@ -531,6 +531,9 @@ p {
     }
     .navbar3{
         gap:10px;
+    }
+    .Course{
+        top: 58px;
     }
     .Course p {
         font-size: 8px;
