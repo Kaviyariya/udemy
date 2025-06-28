@@ -1,0 +1,601 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Gabarito', sans-serif;
+    color: black;
+}
+
+.navbar {
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid black 1px;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 2;
+}
+
+.navbar1 h1 {
+    display: inline;
+    color: rgb(108, 9, 200);
+}
+
+.navbar2 {
+    display: flex;
+    padding: 10px;
+    border-style: solid;
+    border-radius: 30px;
+    width: 60%;
+    gap: 5px;
+    border-width: 1px;
+}
+
+.navbar2 input {
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+.navbar2 input:focus {
+    outline: none;
+}
+
+.navbar3 {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 30px;
+    align-items: center;
+}
+
+.navbar3 .Login {
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgb(108, 9, 200);
+    padding: 7px;
+    color: rgb(108, 9, 200);
+}
+
+.navbar3 .Signup {
+    border-style: solid;
+    border-radius: 5px;
+    background-color: rgb(108, 9, 200);
+    padding: 7px;
+    color: white;
+    border-color: rgb(108, 9, 200);
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar3 .Signup a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar3 .Signup:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navbar3 .Login :hover {
+    background-color: rgb(173, 173, 173);
+    color: white;
+}
+
+.my-learning {
+    position: relative;
+    z-index: 2;
+}
+
+.popup {
+    position: absolute;
+    border: solid black 2px;
+    padding: 10px;
+    background-color: white;
+    width: 100px;
+    top: 150%;
+    right: 0;
+    display: none;
+    cursor: pointer;
+}
+
+.my-learning:hover .popup {
+    display: block;
+}
+
+.Course {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: solid black 1px;
+    top: 68px;
+    background-color: white;
+    position: sticky;
+    z-index: 1;
+}
+
+.Course p {
+    font-size: 16px;
+    background-color: rgb(107, 20, 174);
+    border-radius: 27px;
+    border-style: solid;
+    border-color: rgb(121, 14, 209);
+    padding: 10px;
+    color: white;
+}
+
+.Course p:hover {
+    background-color: white;
+    color: rgb(121, 14, 209);
+}
+
+.sale-img {
+    position: relative;
+}
+
+.sale-img img {
+    width: 100%;
+}
+
+.sale-offer {
+    width: 28%;
+    border: solid black 2px;
+    background-color: white;
+    padding: 2%;
+    top: 10%;
+    left: 10%;
+    position: absolute;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.sale-offer p {
+    margin-top: 5px;
+    color: black;
+}
+
+.recommendation {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.recommendation-title {
+    color: rgb(11, 4, 137);
+}
+
+.recommendation-container {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.course-cart {
+    margin-top: 19px;
+    flex-grow: 1;
+    flex-basis: 19%;
+    background-color: rgb(212, 212, 212);
+    border-radius: 15px;
+    padding: 8px;
+    transition: background 0.3s ease-in-out;
+    margin: 5px;
+
+}
+
+.course-cart:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.course-cart img {
+    width: 99%;
+    height: 160px;
+    border-radius: 25px;
+
+}
+
+
+.course-cart h4 {
+    margin-top: 5px;
+    border-style: solid;
+    padding: 5px;
+    height: auto;
+    width: fit-content;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: rgb(41, 35, 155);
+
+}
+
+.course-cart h3,
+p {
+    color: rgb(86, 5, 102);
+    cursor: pointer;
+}
+
+#recommendation-subtitle {
+    margin-top: 3px;
+    color: rgb(41, 35, 155);
+}
+
+.course-cart h4:hover {
+    background-color: rgb(41, 35, 155);
+    color: white;
+}
+
+.topics {
+    padding: 10px;
+}
+
+.topic-title {
+    margin-top: 10px;
+    color: rgb(97, 4, 4);
+}
+
+.topic-subtitle {
+    margin-top: 5px;
+    color: rgb(126, 1, 1);
+}
+
+.topic-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.topic-container p {
+    border-style: solid;
+    border-color: rgb(112, 2, 2);
+    color: rgb(53, 2, 2);
+    padding: 10px;
+    flex-grow: 1;
+    flex-basis: 25%;
+    font-size: 16px;
+}
+
+.topic-container p:hover {
+    background-color: rgb(232, 173, 173);
+}
+
+.popular {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.popular-title {
+    color: rgb(77, 3, 138);
+
+}
+
+.popular-subtitle {
+    margin-top: 3px;
+    color: rgb(89, 3, 159);
+}
+
+.popular-container {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer {
+    padding: 30px;
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+.footer {
+    box-sizing: border-box;
+}
+
+.footer1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.footer1 p {
+    margin: 8px;
+    cursor: pointer;
+    transition: all ease-in-out 0.3ms;
+    color: white;
+    padding: 10px;
+}
+
+.footer1 p:hover {
+    color: grey;
+    transform: scale(1.01);
+
+}
+
+.footer2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer2 p {
+    margin: 8px;
+}
+
+.signup {
+    display: flex;
+    width: auto;
+    padding: 100px;
+    gap: 30px;
+}
+
+.signup-img {
+    display: inline;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    width: 410px;
+    margin-top: 50px;
+    height: 400px;
+}
+
+.login-heading {
+    text-align: center;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+    width: 100%;
+
+}
+
+.login-fullname {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.login-fullname p,
+.login-Email p {
+    color: black;
+}
+
+.login-fullname:hover,
+.login-Email:hover {
+    border-color: blueviolet;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login-Email {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.checkbox {
+    display: flex;
+    gap: 10px;
+    margin-top: 13px;
+    color: black;
+    font-size: 13px;
+    align-items: center;
+}
+
+.confirm-box {
+    margin-top: 10px;
+    display: flex;
+    background-color: blueviolet;
+    color: white;
+    justify-content: center;
+    padding: 17px;
+    border-radius: 5px;
+    gap: 10px;
+    align-items: center;
+}
+
+.confirm-box:hover {
+    background-color: rgb(175, 31, 242);
+}
+
+.option {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.icon {
+    display: flex;
+    margin-left: 120px;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.icon img {
+    border-style: solid;
+    border-color: blueviolet;
+    border-radius: 5px;
+    padding: 10px;
+    border-width: 1px;
+}
+
+.conditions {
+    margin-top: 30px;
+    font-size: 12px;
+    margin-left: 50px;
+}
+
+.account {
+    margin-top: 30px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+}
+
+.account:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* media query */
+@media screen and (max-width:800px) {
+    body {
+        font-size: 10px;
+    }
+    .Course{
+        top: 60px;
+    }
+    .Course p {
+        font-size: 10px;
+        background-color: rgb(107, 20, 174);
+        border-radius: 27px;
+        border-style: solid;
+        border-color: rgb(121, 14, 209);
+        padding: 7px;
+        color: white;
+    }
+    .navbar2 input{
+        font-size: 10px;
+    }
+    .signup {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    .signup-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .login {
+        width: 90%;
+        margin-top: 30px;
+        height: auto;
+    }
+
+    .login-box {
+        gap: 15px;
+    }
+
+    .icon {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .conditions,
+    .account {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .course-cart {
+        flex-basis: 40%;
+    }
+
+    .Course p {
+        font-size: 10px;
+        background-color: rgb(107, 20, 174);
+        border-radius: 27px;
+        border-style: solid;
+        border-color: rgb(121, 14, 209);
+        padding: 5px;
+        color: white;
+    }
+
+    .navbar .navbar2 {
+        display: none;
+    }
+
+    .signup {
+        padding: 20px 10px;
+    }
+
+    .signup-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .login {
+        width: 100%;
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+
+    .login-box {
+        gap: 10px;
+    }
+
+    .icon {
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-left: 0;
+    }
+
+    .icon img {
+        padding: 8px;
+        height: 20px;
+        width: 20px;
+    }
+
+    .confirm-box {
+        padding: 14px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .account {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .conditions {
+        font-size: 11px;
+        padding: 0 10px;
+    }
+
+    .login-fullname,
+    .login-Email {
+        padding: 15px;
+    }
+
+    .login-fullname p,
+    .login-Email p {
+        font-size: 14px;
+    }
+}
